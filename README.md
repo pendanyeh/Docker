@@ -321,7 +321,7 @@ Output
 
 ```
 REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
-brightmindtech/docker   latest    960d37536dcd   26 seconds ago   467MB
+brightmindtech/docker              latest    3cc5d1d1de8f   About a minute ago   802MB
 ubuntu                             latest    58db3edaf2be   13 days ago      77.8MB
 hello-world                        latest    feb5d9fea6a5   16 months ago    13.3kB
 ```
