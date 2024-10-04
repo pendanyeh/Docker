@@ -249,7 +249,7 @@ This message shows that your installation appears to be working correctly.
 
 ## Great Job, Now start with the examples folder to write your first Dockerfile and move to the next examples. Happy Learning :)
 
-### Clone this repository and move it to the example folder
+### Clone this repository and "cd" to the "example folder/directory"
 
 ```
 https://github.com/rayeeta/Docker.git
