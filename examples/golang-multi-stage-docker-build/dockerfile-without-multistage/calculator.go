@@ -9,12 +9,12 @@ import (
 )
 
 func main() {
-	fmt.Println("Hi Abhishek.Veeramalla, I am a calculator app ....")
+	fmt.Println("Hello, welcome to Bright Mind Tech, and this is our BMT calculator app. Have fun! ....")
 
 	for {
 		// Read input from the user
 		reader := bufio.NewReader(os.Stdin)
-		fmt.Print("Enter any calculation (Example: 1 + 2 (or) 2 * 5 -> Please maintain spaces as shown in example): ")
+		fmt.Print("Enter any calculation (Example: 1 + 2 (or) 2 * 5 -> Please maintain spaces as shown in example, and press enter for your results. Ctrl C to kill the process.): ")
 		text, _ := reader.ReadString('\n')
 
 		// Trim the newline character from the input
