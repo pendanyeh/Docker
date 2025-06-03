@@ -6,7 +6,7 @@ The real advantage of a multi-stage Docker build and distro-less images can be u
 
 A Multi-Stage Docker Build is a technique in Docker that uses multiple FROM statements within a single Dockerfile. This approach helps you produce smaller and more efficient images by keeping the build environment separate from the runtime environment.
 
-** Why Use It?
+** Why Use It? **
 Typically, a Docker image might include all the tools needed to build your application (such as compilers and package managers), even though they're not required when the app runs. This makes the image larger than necessary.
 
 Multi-stage builds address this by:
