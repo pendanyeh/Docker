@@ -6,15 +6,15 @@ The real advantage of a multi-stage Docker build and distro-less images can be u
 
 A Multi-Stage Docker Build is a technique in Docker that uses multiple FROM statements within a single Dockerfile. This approach helps you produce smaller and more efficient images by keeping the build environment separate from the runtime environment.
 
-## Why Use It? 
+### Why Use It? 
 Typically, a Docker image might include all the tools needed to build your application (such as compilers and package managers), even though they're not required when the app runs. This makes the image larger than necessary.
 
-# Multi-stage builds address this by:
+### Multi-stage builds address this by:
 
 - Using one stage to compile or build your app with all necessary tools.
 - Copying only the essential files (like binaries or build outputs) into a second, minimal image for running the app.
 
-## Example: Node.js Application
+### Example: Node.js Application
 
 ````dockerfile
 # Stage 1: Build
@@ -34,9 +34,9 @@ RUN npm install --only=production
 CMD ["node", "dist/index.js"]
 ````
 
-** Advantages:
+### Advantages:
 
-- # Smaller images:** Only runtime dependencies are included.
-- ## Improved security:** Build tools are excluded from the production container.
-- ### Faster deployments:** Reduced image size means quicker downloads and startups.
+- *** Smaller images:** Only runtime dependencies are included.
+- *** Improved security:** Build tools are excluded from the production container.
+- *** Faster deployments:** Reduced image size means quicker downloads and startups.
 - *** Clear separation:** Build and runtime environments remain distinct.
