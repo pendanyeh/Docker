@@ -265,24 +265,35 @@ services:
 | **Use Case**           | Good for running different operating systems on one host | Best for microservices, rapid deployment, scaling   |
 
 ---
+- **VMs:** Each application runs inside its own OS, managed by a hypervisor.
+- **Containers:** Applications share the host OS kernel, making them more efficient and faster to start.
 
-**What is a Kernel?**
+### What is a Kernel?
 
-+-----------------------------+
-|        Applications         |
-+-----------------------------+
-             |
-             v
-+-----------------------------+
-|           Kernel            |
-| (Core OS component managing |
-|  hardware-software comms)   |
-+-----------------------------+
-             |
-             v
-+-----------------------------+
-|          Hardware           |
-+-----------------------------+
+**Definition:**  
+
+- The kernel is the central component of an operating system, responsible for handling interactions between software and hardware.
+
+**Description:**  
+- It manages essential functions such as memory allocation
+-  Process scheduling
+-  File system operations, and
+-  Device input/output. 
+
+**Applications access hardware resources through the kernel rather than directly for several important reasons:**
+
+- **Safety and Security:** The kernel prevents applications from interfering with each other or the system, protecting data and hardware from unauthorized access or damage.
+  
+- **Resource Management:** The kernel manages and allocates hardware resources (CPU, memory, devices) efficiently among all running applications.
+
+- **Abstraction:** The kernel provides a consistent interface for applications, so they don’t need to handle hardware differences or complexities.
+  
+- **Stability:** By controlling hardware access, the kernel helps prevent crashes and system instability caused by faulty or malicious applications.
+
+**The kernel acts as a protective and organizing layer between applications and hardware. Take a look at the diagram below**
+
+![image](https://github.com/user-attachments/assets/54142db8-4d77-4139-920e-1180cb16b792)
+
 
 **Diagram: Virtual Machines vs Containers**
 
@@ -290,8 +301,7 @@ services:
 
 
 
-- **VMs:** Each application runs inside its own OS, managed by a hypervisor.
-- **Containers:** Applications share the host OS kernel, making them more efficient and faster to start.
+
 
 
 
