@@ -12,7 +12,7 @@
 - WSL 2 (Windows Subsystem for Linux v2) must be installed and enabled
 - Virtualization enabled in BIOS (Intel VT-x or AMD-V)
 - At least 4 GB RAM (8 GB or more recommended)
-- Hyper-V and Containers features enabled in Windows
+- Hyper-V and Containers features are enabled in Windows
 
 **Docker Desktop on macOS**  
 
@@ -37,7 +37,7 @@
 - Administrative or root access for installation
 - Reliable internet connection to download Docker images and updates
 
-## Conmmonly used terminology: Docker Engine, Docker Daemon, Docker Desktop, Dockerhub
+## Commonly used terminology: Docker Engine, Docker Daemon, Docker Desktop, Dockerhub
 
 ## 1. Docker Engine
 
@@ -91,7 +91,7 @@ It operates on Linux and handles all container-related tasks.
 
 ![image](https://github.com/user-attachments/assets/6026d7f1-9c85-4bdc-a173-2cbd1345c3fd)
 
-## Follow the link below to the website
+## Follow the link below to visit the Docker website
 
 https://docs.docker.com/get-started/images/docker-architecture.webp
 
@@ -265,6 +265,19 @@ services:
 | **Use Case**           | Good for running different operating systems on one host | Best for microservices, rapid deployment, scaling   |
 
 ---
+
+**What is a Kernel?**
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ **Definition:**                                                             │
+│ The kernel is the central component of an operating system, responsible     │
+│ for handling interactions between software and hardware.                    │
+│                                                                             │
+│ **Description:**                                                            │
+│ It manages essential functions such as memory allocation, process           │
+│ scheduling, file system operations, and device input/output. Applications   │
+│ access hardware resources through the kernel rather than directly.          │
+└─────────────────────────────────────────────────────────────────────────────┘
 
 **Diagram: Virtual Machines vs Containers**
 
