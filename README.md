@@ -268,16 +268,21 @@ services:
 
 **What is a Kernel?**
 
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ **Definition:**                                                             │
-│ The kernel is the central component of an operating system, responsible     │
-│ for handling interactions between software and hardware.                    │
-│                                                                             │
-│ **Description:**                                                            │
-│ It manages essential functions such as memory allocation, process           │
-│ scheduling, file system operations, and device input/output. Applications   │
-│ access hardware resources through the kernel rather than directly.          │
-└─────────────────────────────────────────────────────────────────────────────┘
++-----------------------------+
+|        Applications         |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|           Kernel            |
+| (Core OS component managing |
+|  hardware-software comms)   |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|          Hardware           |
++-----------------------------+
 
 **Diagram: Virtual Machines vs Containers**
 
