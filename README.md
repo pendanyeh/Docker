@@ -262,6 +262,41 @@ services:
 
 * Push your images to Docker Hub
 
+## Virtual Machines (VM) vs Containers
+
+Here’s a paraphrased, side-by-side comparison of Virtual Machines and Containers, along with a simple diagram:
+
+| Feature                | Virtual Machines (VMs)                                   | Containers                                         |
+|------------------------|---------------------------------------------------------|----------------------------------------------------|
+| **Definition**         | Emulates a full computer system with its own OS, running on a hypervisor above the host hardware | Runs applications in isolated environments that share the host OS kernel |
+| **OS Usage**           | Each VM has its own complete guest operating system      | Containers share the host OS kernel, no separate OS |
+| **Resource Usage**     | Consumes more memory and storage                        | Lightweight, uses less memory and disk space        |
+| **Startup Time**       | Slower to boot                                          | Starts up almost instantly                          |
+| **Isolation**          | Strong isolation, better hardware emulation             | Process-level isolation, less overhead              |
+| **Use Case**           | Good for running different operating systems on one host | Best for microservices, rapid deployment, scaling   |
+
+---
+
+**Diagram: Virtual Machines vs Containers**
+
+````plaintext
+Virtual Machines:                          Containers:
+
++---------------------+                   +---------------------+
+| Host Hardware       |                   | Host Hardware       |
++---------------------+                   +---------------------+
+| Host OS             |                   | Host OS             |
++---------------------+                   +---------------------+
+| Hypervisor          |                   | Container Runtime   |
++---------------------+                   +---------------------+
+| Guest OS | Guest OS |                   | Container | Container |
+|  App    |   App    |                   |   App    |   App     |
++---------------------+                   +---------------------+
+````
+
+- **VMs:** Each application runs inside its own OS, managed by a hypervisor.
+- **Containers:** Applications share the host OS kernel, making them more efficient and faster to start.
+
 
 
 ## What is a container?
