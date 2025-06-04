@@ -87,6 +87,20 @@ It operates on Linux and handles all container-related tasks.
 | Docker Daemon  | The backend service that does the work (inside Engine) |
 | Docker Hub     | Cloud-based image storage & distribution service       |
  
++-------------------+         +-------------------+         +-------------------+
+|                   |         |                   |         |                   |
+|  Docker Desktop   +-------->+  Docker Engine    +-------->+  Docker Daemon    |
+| (GUI & Tools)     |         | (Container Mgmt)  |         | (Runs Containers) |
+|                   |         |                   |         |                   |
++-------------------+         +-------------------+         +-------------------+
+         |
+         v
++-------------------+
+|                   |
+|   Docker Hub      |
+| (Image Registry)  |
+|                   |
++-------------------+
 
 # Prerequisites
 
