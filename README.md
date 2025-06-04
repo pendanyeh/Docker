@@ -92,7 +92,7 @@ It operates on Linux and handles all container-related tasks.
 
 ## 1. Basic Command Line Skills
 
-→ You should be comfortable with:
+**You should be comfortable with:**
 
 * Navigating directories (cd, ls, pwd)
 
