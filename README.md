@@ -52,58 +52,72 @@
 * Running services or daemons
 
 * Once you're comfortable with these, start learning Docker with small projects—like containerizing a simple web app.
+
   
 
 ### 🐳 Getting Started with Docker: 
 
-🔹 1. What is Docker?
-Docker is a containerization tool that packages applications and their dependencies into containers. Containers are lightweight, fast, and portable across environments—ideal for DevOps.
+### 1. What is Docker?
+* Docker is a containerization tool that packages applications and their dependencies into containers.
+  Containers are lightweight, fast, and portable across environments—ideal for DevOps.
 
-🔹 2. Why Use Docker?
-Works the same on any system (dev, staging, prod)
+### 2. Why Use Docker?
+* Works the same on any system (dev, staging, prod)
 
-Fast startup, isolated environments
+* Fast startup, isolated environments
 
-Easy to scale and integrate with cloud and CI/CD
+* Easy to scale and integrate with cloud and CI/CD
 
-🔹 3. Install Docker
-Windows/macOS: Install Docker Desktop from https://www.docker.com/products/docker-desktop
+### 3. Install Docker
 
-Linux: Use your distro's package manager
+Ways to install Docker, Cloud based installation or Locally based installation. For the latter,
+find the link below. Window users please make sure to check if your Windows OS is AMD64 or ARM64
+before you start any installation.
 
-bash
-Copy
-Edit
-sudo apt install docker.io
-sudo systemctl start docker
-sudo systemctl enable docker
-✅ Verify with:
+* Windows/macOS: Install Docker Desktop from https://www.docker.com/products/docker-desktop
+* For Windows OS, Open Settings > System > About
 
-bash
-Copy
-Edit
-docker --version
-docker run hello-world
-🔹 4. Docker Basics
-Command	Description
-docker ps	List running containers
-docker images	List local images
-docker pull	Download image from Docker Hub
-docker run	Start container
-docker stop	Stop container
+### Look for:
 
-Example:
+. System type
 
-bash
-Copy
-Edit
-docker run -d -p 80:80 nginx
-This runs NGINX in the background and maps port 80.
+. If it says "64-bit operating system, x64-based processor" → ### You're on amd64
 
-🔹 5. Dockerfile: Build Your Own Image
-Create a file called Dockerfile:
+. If it says "64-bit operating system, ARM-based processor" → ### You're on arm64
+
+### For Linux Os in the Cloud or WSL on Windows, follow this instructions:
+
+* Linux: Use your distro's package manager
+
+. sudo apt install docker.io
+. sudo systemctl start docker
+. sudo systemctl enable docker
+
+* Make sure to verify your installation:
+
+→ docker --version
+→ docker run hello-world
+
+### 4. Docker Basics
+
+* Command	Description
+
+. docker ps	List running containers
+. docker images	List local images
+. docker pull	Download image from Docker Hub
+. docker run	Start container
+. docker stop	Stop container
+
+. docker run -d -p 80:80 nginx
+
+* This runs NGINX in the background and maps port 80.
+
+### 5. Dockerfile: Build Your Own Image
+
+* Create a file called Dockerfile:
 
 Dockerfile
+
 Copy
 Edit
 FROM python:3.10
@@ -111,19 +125,16 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
-Then build and run:
 
-bash
-Copy
-Edit
-docker build -t my-python-app .
-docker run -p 5000:5000 my-python-app
-🔹 6. Docker Compose (Optional Next Step)
-Use Compose for multi-container apps:
+* Then build and run:
 
-yaml
-Copy
-Edit
+. docker build -t my-python-app .
+. docker run -p 5000:5000 my-python-app
+
+### 6. Docker Compose (Optional Next Step)
+
+* Use Compose for multi-container apps:
+
 version: '3'
 services:
   web:
@@ -132,18 +143,18 @@ services:
       - "5000:5000"
   db:
     image: postgres
-Run it:
+    
+* Run it:
 
-bash
-Copy
-Edit
-docker-compose up
-✅ Next Steps
-Learn about volumes (persistent data)
+. docker-compose up
 
-Explore networks (inter-container communication)
+### What to keep in mind:
 
-Push your images to Docker Hub
+* Learn about volumes (persistent data) (You will learn in in our Kubernetes program)
+
+* Explore networks (inter-container communication) (You will learn in in our Kubernetes program)
+
+* Push your images to Docker Hub
 
 
 
