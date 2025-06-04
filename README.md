@@ -1,10 +1,10 @@
-# Introduction to Docker and what a Devops and Cloud engineer should know about this tool.
+# Introduction to Docker and what a DevOps and Cloud engineer should know about this tool.
 
 ## Repo to learn Docker with examples. Contributions are most welcome.
 
 ## Requirements for Docker Desktop installation
 
-***Docker Desktop on Windows***
+**Docker Desktop on Windows**
 
 ***System Requirements:***
 
@@ -95,7 +95,7 @@ It operates on Linux and handles all container-related tasks.
 
 ## Follow the link below to visit the Docker website
 
-https://docs.docker.com/get-started/images/docker-architecture.webp
+[https://docs.docker.com/get-started/images/docker-architecture.webp](https://docs.docker.com/get-started/docker-overview/#:~:text=Docker%20Desktop%20is%20an%20easy,more%20information%2C%20see%20Docker%20Desktop.)
 
 # Prerequisites
 
@@ -177,7 +177,11 @@ https://docs.docker.com/get-started/images/docker-architecture.webp
 **Find the link below. Window users, please make sure to check if your Windows OS is AMD64 or ARM64**
 **before you start any installation.**
 
-* Windows/macOS: Install Docker Desktop from https://www.docker.com/products/docker-desktop
+* Windows/macOS: Install Docker Desktop from
+  
+  https://docs.docker.com/engine/install/
+  https://www.docker.com/products/docker-desktop
+  
 * For Windows OS, Open Settings > System > About
 
 ### Look for:
