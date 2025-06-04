@@ -93,9 +93,9 @@ It operates on Linux and handles all container-related tasks.
 
 ![image](https://github.com/user-attachments/assets/6026d7f1-9c85-4bdc-a173-2cbd1345c3fd)
 
-## Follow the link below to visit the Docker website
+## Link to setup your Dockerhub account:
 
-[https://docs.docker.com/get-started/images/docker-architecture.webp](https://docs.docker.com/get-started/docker-overview/#:~:text=Docker%20Desktop%20is%20an%20easy,more%20information%2C%20see%20Docker%20Desktop.)
+https://hub.docker.com/
 
 # Prerequisites
 
@@ -178,8 +178,11 @@ It operates on Linux and handles all container-related tasks.
 **before you start any installation.**
 
 * Windows/macOS: Install Docker Desktop from
+
+  https://docs.docker.com/desktop/setup/install/windows-install/
   
   https://docs.docker.com/engine/install/
+  
   https://www.docker.com/products/docker-desktop
   
 * For Windows OS, Open Settings > System > About
