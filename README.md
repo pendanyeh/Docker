@@ -1,10 +1,11 @@
 # Introduction to Docker and what a Devops and Cloud engineer should know about this tool.
 
-# Repo to learn Docker with examples. Contributions are most welcome.
+## Repo to learn Docker with examples. Contributions are most welcome.
 
-### Prerequisites
+# Prerequisites
 
 ### 1. Basic Command Line Skills
+
 * You should be comfortable with:
 
 * Navigating directories (cd, ls, pwd)
@@ -13,7 +14,7 @@
 
 * Running scripts and installing packages
 
-### 2. Operating Systems & Virtualization Concepts
+# 2. Operating Systems & Virtualization Concepts
 * Understand how traditional applications run on OSes
 
 * Know what virtual machines are (optional but useful)
@@ -27,24 +28,24 @@
 
 * Basics of client-server communication (e.g., HTTP)
 
-### 4. Software Development & Deployment Basics
+# 4. Software Development & Deployment Basics
 * Know what builds, environments, and dependencies are
 
 * Familiarity with package managers (e.g., npm, pip, apt)
 
 * Concept of an application stack (e.g., Node.js + MongoDB)
 
-### 5. Understanding of Source Control (Git)
+# 5. Understanding of Source Control (Git)
 * You don’t need to be a Git expert, but you should:
 
 * Know how to clone, commit, and push
 
 * Be able to manage basic branches
 
-### 6. Familiarity with YAML & Configuration Files
+# 6. Familiarity with YAML & Configuration Files
 * Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
 
-### 7. Optional but Helpful: Linux Fundamentals
+# 7. Optional but Helpful: Linux Fundamentals
 * Knowing basic file system layout (e.g., /etc, /usr, /var)
 
 * Managing permissions
@@ -55,20 +56,20 @@
 
   
 
-### 🐳 Getting Started with Docker: 
+# 🐳 Getting Started with Docker: 
 
-### 1. What is Docker?
+## 1. What is Docker?
 * Docker is a containerization tool that packages applications and their dependencies into containers.
   Containers are lightweight, fast, and portable across environments—ideal for DevOps.
 
-### 2. Why Use Docker?
+## 2. Why Use Docker?
 * Works the same on any system (dev, staging, prod)
 
 * Fast startup, isolated environments
 
 * Easy to scale and integrate with cloud and CI/CD
 
-### 3. Install Docker
+## 3. Install Docker
 
 Ways to install Docker, Cloud based installation or Locally based installation. For the latter,
 find the link below. Window users please make sure to check if your Windows OS is AMD64 or ARM64
@@ -100,7 +101,7 @@ before you start any installation.
 → docker --version
 → docker run hello-world
 
-### 4. Docker Basics
+# 4. Docker Basics
 
 * Command	Description
 
@@ -114,7 +115,7 @@ before you start any installation.
 
 * This runs NGINX in the background and maps port 80.
 
-### 5. Dockerfile: Build Your Own Image
+# 5. Dockerfile: Build Your Own Image
 
 * Create a file called Dockerfile:
 
@@ -131,7 +132,7 @@ CMD ["python", "app.py"]
 * docker build -t my-python-app .
 * docker run -p 5000:5000 my-python-app
 
-### 6. Docker Compose (COMPLETELY Optional, but you should knbow it exist)
+# 6. Docker Compose (COMPLETELY Optional, but you should knbow it exist)
 
 * Use Compose for multi-container apps:
 
@@ -148,7 +149,7 @@ services:
 
 * docker-compose up
 
-### What to keep in mind:
+## What to keep in mind:
 
 * Learn about volumes (persistent data) (You will learn in in our Kubernetes program)
 
