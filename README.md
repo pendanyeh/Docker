@@ -13,46 +13,138 @@
 
 * Running scripts and installing packages
 
-✅ 2. Operating Systems & Virtualization Concepts
-Understand how traditional applications run on OSes
+### ✅ 2. Operating Systems & Virtualization Concepts
+* Understand how traditional applications run on OSes
 
-Know what virtual machines are (optional but useful)
+* Know what virtual machines are (optional but useful)
 
-Learn the difference between VMs vs Containers
+* Learn the difference between VMs vs Containers
 
-✅ 3. Networking Basics
-What are ports and IP addresses
+### ✅ 3. Networking Basics
+* What are ports and IP addresses
 
-What is localhost
+* What is localhost
 
-Basics of client-server communication (e.g., HTTP)
+* Basics of client-server communication (e.g., HTTP)
 
-✅ 4. Software Development & Deployment Basics
-Know what builds, environments, and dependencies are
+### ✅ 4. Software Development & Deployment Basics
+* Know what builds, environments, and dependencies are
 
-Familiarity with package managers (e.g., npm, pip, apt)
+* Familiarity with package managers (e.g., npm, pip, apt)
 
-Concept of an application stack (e.g., Node.js + MongoDB)
+* Concept of an application stack (e.g., Node.js + MongoDB)
 
-✅ 5. Understanding of Source Control (Git)
-You don’t need to be a Git expert, but you should:
+### ✅ 5. Understanding of Source Control (Git)
+* You don’t need to be a Git expert, but you should:
 
-Know how to clone, commit, and push
+* Know how to clone, commit, and push
 
-Be able to manage basic branches
+* Be able to manage basic branches
 
-✅ 6. Familiarity with YAML & Configuration Files
-Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
+### ✅ 6. Familiarity with YAML & Configuration Files
+* Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
 
-✅ 7. Optional but Helpful: Linux Fundamentals
-Knowing basic file system layout (e.g., /etc, /usr, /var)
+### ✅ 7. Optional but Helpful: Linux Fundamentals
+* Knowing basic file system layout (e.g., /etc, /usr, /var)
 
-Managing permissions
+* Managing permissions
 
-Running services or daemons
+* Running services or daemons
 
-Once you're comfortable with these, start learning Docker with small projects—like containerizing a simple web app.
-With all that said, let's move on to the next lesson topic:
+* Once you're comfortable with these, start learning Docker with small projects—like containerizing a simple web app.
+  
+
+### 🐳 Getting Started with Docker: 
+
+🔹 1. What is Docker?
+Docker is a containerization tool that packages applications and their dependencies into containers. Containers are lightweight, fast, and portable across environments—ideal for DevOps.
+
+🔹 2. Why Use Docker?
+Works the same on any system (dev, staging, prod)
+
+Fast startup, isolated environments
+
+Easy to scale and integrate with cloud and CI/CD
+
+🔹 3. Install Docker
+Windows/macOS: Install Docker Desktop from https://www.docker.com/products/docker-desktop
+
+Linux: Use your distro's package manager
+
+bash
+Copy
+Edit
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+✅ Verify with:
+
+bash
+Copy
+Edit
+docker --version
+docker run hello-world
+🔹 4. Docker Basics
+Command	Description
+docker ps	List running containers
+docker images	List local images
+docker pull	Download image from Docker Hub
+docker run	Start container
+docker stop	Stop container
+
+Example:
+
+bash
+Copy
+Edit
+docker run -d -p 80:80 nginx
+This runs NGINX in the background and maps port 80.
+
+🔹 5. Dockerfile: Build Your Own Image
+Create a file called Dockerfile:
+
+Dockerfile
+Copy
+Edit
+FROM python:3.10
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+CMD ["python", "app.py"]
+Then build and run:
+
+bash
+Copy
+Edit
+docker build -t my-python-app .
+docker run -p 5000:5000 my-python-app
+🔹 6. Docker Compose (Optional Next Step)
+Use Compose for multi-container apps:
+
+yaml
+Copy
+Edit
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+  db:
+    image: postgres
+Run it:
+
+bash
+Copy
+Edit
+docker-compose up
+✅ Next Steps
+Learn about volumes (persistent data)
+
+Explore networks (inter-container communication)
+
+Push your images to Docker Hub
+
 
 
 ## What is a container?
