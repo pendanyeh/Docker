@@ -354,6 +354,7 @@ services:
 ## Workflow Commands
 
 **Please, make sure before doing anything, your Docker engine is running, you are signed into your Docker desktop, and it's the same account for both environments.**
+
 **Here’s the complete Docker development workflow with all key commands:**
 
 1. **Log in to Docker Hub (or your registry):**
