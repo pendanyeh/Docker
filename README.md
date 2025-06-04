@@ -184,8 +184,10 @@ https://hub.docker.com/
   https://docs.docker.com/engine/install/
   
   https://www.docker.com/products/docker-desktop
+
+  https://app.docker.com/
   
-* For Windows OS, Open Settings > System > About
+* Check your Windows OS: Open Settings > System > About
 
 ### Look for:
 
