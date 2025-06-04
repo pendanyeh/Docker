@@ -87,11 +87,12 @@ It operates on Linux and handles all container-related tasks.
 | Docker Daemon  | The backend service that does the work (inside Engine) |
 | Docker Hub     | Cloud-based image storage & distribution service       |
  
-## Docker Architecture
+# Docker Architecture in a diagram 
 
 ![image](https://github.com/user-attachments/assets/6026d7f1-9c85-4bdc-a173-2cbd1345c3fd)
 
 ## Follow the link below to the website
+
 https://docs.docker.com/get-started/images/docker-architecture.webp
 
 # Prerequisites
