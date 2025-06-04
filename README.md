@@ -4,7 +4,7 @@
 
 # Prerequisites
 
-### 1. Basic Command Line Skills
+## 1. Basic Command Line Skills
 
 * You should be comfortable with:
 
@@ -14,38 +14,39 @@
 
 * Running scripts and installing packages
 
-# 2. Operating Systems & Virtualization Concepts
+## 2. Operating Systems & Virtualization Concepts
+
 * Understand how traditional applications run on OSes
 
 * Know what virtual machines are (optional but useful)
 
 * Learn the difference between VMs vs Containers
 
-### 3. Networking Basics
+## 3. Networking Basics
 * What are ports and IP addresses
 
 * What is localhost
 
 * Basics of client-server communication (e.g., HTTP)
 
-# 4. Software Development & Deployment Basics
+## 4. Software Development & Deployment Basics
 * Know what builds, environments, and dependencies are
 
 * Familiarity with package managers (e.g., npm, pip, apt)
 
 * Concept of an application stack (e.g., Node.js + MongoDB)
 
-# 5. Understanding of Source Control (Git)
+## 5. Understanding of Source Control (Git)
 * You don’t need to be a Git expert, but you should:
 
 * Know how to clone, commit, and push
 
 * Be able to manage basic branches
 
-# 6. Familiarity with YAML & Configuration Files
+## 6. Familiarity with YAML & Configuration Files
 * Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
 
-# 7. Optional but Helpful: Linux Fundamentals
+## 7. Optional but Helpful: Linux Fundamentals
 * Knowing basic file system layout (e.g., /etc, /usr, /var)
 
 * Managing permissions
@@ -82,10 +83,12 @@ before you start any installation.
 
 → System type
 
-. If it says "64-bit operating system, x64-based processor" 
+* If it says "64-bit operating system, x64-based processor" 
+
  ### You're on amd64
 
-. If it says "64-bit operating system, ARM-based processor" 
+* If it says "64-bit operating system, ARM-based processor"
+  
  ### You're on arm64
 
 ### For Linux Os in the Cloud or WSL on Windows, follow this instructions:
@@ -101,7 +104,7 @@ before you start any installation.
 → docker --version
 → docker run hello-world
 
-# 4. Docker Basics
+## 4. Docker Basics
 
 * Command	Description
 
@@ -115,7 +118,7 @@ before you start any installation.
 
 * This runs NGINX in the background and maps port 80.
 
-# 5. Dockerfile: Build Your Own Image
+## 5. Dockerfile: Build Your Own Image
 
 * Create a file called Dockerfile:
 
@@ -132,7 +135,7 @@ CMD ["python", "app.py"]
 * docker build -t my-python-app .
 * docker run -p 5000:5000 my-python-app
 
-# 6. Docker Compose (COMPLETELY Optional, but you should knbow it exist)
+## 6. Docker Compose (COMPLETELY Optional, but you should knbow it exist)
 
 * Use Compose for multi-container apps:
 
