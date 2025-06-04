@@ -287,7 +287,7 @@ services:
 
 ### Critical notice
 
-##Applications access hardware resources through the kernel rather than directly for several important reasons:**
+## Applications access hardware resources through the kernel rather than directly for several important reasons:**
 
 - **Safety and Security:** The kernel prevents applications from interfering with each other or the system, protecting data and hardware from unauthorized access or damage.
   
@@ -297,7 +297,7 @@ services:
   
 - **Stability:** By controlling hardware access, the kernel helps prevent crashes and system instability caused by faulty or malicious applications.
 
-##The kernel acts as a protective and organizing layer between applications and hardware. Take a look at the diagram below**
+## The kernel acts as a protective and organizing layer between applications and hardware. Take a look at the diagram below**
 
 ![image](https://github.com/user-attachments/assets/54142db8-4d77-4139-920e-1180cb16b792)
 
