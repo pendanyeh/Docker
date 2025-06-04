@@ -102,6 +102,8 @@ It operates on Linux and handles all container-related tasks.
 |                   |
 +-------------------+
 
+https://docs.docker.com/get-started/images/docker-architecture.webp
+
 # Prerequisites
 
 ## 1. Basic Command Line Skills
