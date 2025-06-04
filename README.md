@@ -353,7 +353,8 @@ services:
 
 ## Workflow Commands
 
-Here’s the complete Docker development workflow with all key commands, including login:
+**Please, make sure before doing anything, your Docker engine is running, you are signed into your Docker desktop, and it's the same account for both environments.**
+**Here’s the complete Docker development workflow with all key commands:**
 
 1. **Log in to Docker Hub (or your registry):**
    ```
@@ -396,6 +397,8 @@ Here’s the complete Docker development workflow with all key commands, includi
    ```
 
 Replace `username`, `your-image-name`, `tag`, and `<container_id>` with your actual Docker Hub username, image name, tag, and container ID.
+
+
 
 
 
