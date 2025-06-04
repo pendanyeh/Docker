@@ -4,17 +4,17 @@
 
 ### Prerequisites
 
-** 1. Basic Linux Knowledge
+### 1. Basic Linux Knowledge
 Understanding of Linux file system, permissions, and common commands (cd, ls, cat, chmod, etc.)
 
 Experience with a terminal or shell
 
-** 2. Command-Line Familiarity
+### 2. Command-Line Familiarity
 Comfortable using the command line to execute and manage programs
 
 Familiar with text editors like vim, nano, or VSCode
 
-** 3. Networking Fundamentals
+### 3. Networking Fundamentals
 Basic concepts like IP addresses, ports, DNS, and firewalls
 
 Understanding of HTTP/HTTPS protocols and client-server architecture
@@ -24,10 +24,10 @@ Familiarity with at least one programming language (e.g., Python, Java, JavaScri
 
 Understanding how applications are structured (frontend, backend, database)
 
-** 5. Version Control (Git)
+### 5. Version Control (Git)
 Knowing how to clone a repo, commit changes, and use branches
 
-** 6. Virtualization Concepts (Optional but Helpful)
+### 6. Virtualization Concepts (Optional but Helpful)
 Understanding the difference between virtual machines and containers
 
 With all that said, let's move on to the next lesson topic:
