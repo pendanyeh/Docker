@@ -262,9 +262,7 @@ services:
 
 * Push your images to Docker Hub
 
-## Virtual Machines (VM) vs Containers
-
-Here’s a paraphrased, side-by-side comparison of Virtual Machines and Containers, along with a simple diagram:
+## Virtual Machines(VM) VS Containers
 
 | Feature                | Virtual Machines (VMs)                                   | Containers                                         |
 |------------------------|---------------------------------------------------------|----------------------------------------------------|
@@ -279,20 +277,8 @@ Here’s a paraphrased, side-by-side comparison of Virtual Machines and Containe
 
 **Diagram: Virtual Machines vs Containers**
 
-````plaintext
-Virtual Machines:                          Containers:
+![image](https://github.com/user-attachments/assets/f30cffad-49f0-45cb-9048-0d5e95eb5e0f)
 
-+---------------------+                   +---------------------+
-| Host Hardware       |                   | Host Hardware       |
-+---------------------+                   +---------------------+
-| Host OS             |                   | Host OS             |
-+---------------------+                   +---------------------+
-| Hypervisor          |                   | Container Runtime   |
-+---------------------+                   +---------------------+
-| Guest OS | Guest OS |                   | Container | Container |
-|  App    |   App    |                   |   App    |   App     |
-+---------------------+                   +---------------------+
-````
 
 - **VMs:** Each application runs inside its own OS, managed by a hypervisor.
 - **Containers:** Applications share the host OS kernel, making them more efficient and faster to start.
