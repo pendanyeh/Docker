@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-### ✅ 1. Basic Command Line Skills
+### 1. Basic Command Line Skills
 * You should be comfortable with:
 
 * Navigating directories (cd, ls, pwd)
@@ -13,38 +13,38 @@
 
 * Running scripts and installing packages
 
-### ✅ 2. Operating Systems & Virtualization Concepts
+### 2. Operating Systems & Virtualization Concepts
 * Understand how traditional applications run on OSes
 
 * Know what virtual machines are (optional but useful)
 
 * Learn the difference between VMs vs Containers
 
-### ✅ 3. Networking Basics
+### 3. Networking Basics
 * What are ports and IP addresses
 
 * What is localhost
 
 * Basics of client-server communication (e.g., HTTP)
 
-### ✅ 4. Software Development & Deployment Basics
+### 4. Software Development & Deployment Basics
 * Know what builds, environments, and dependencies are
 
 * Familiarity with package managers (e.g., npm, pip, apt)
 
 * Concept of an application stack (e.g., Node.js + MongoDB)
 
-### ✅ 5. Understanding of Source Control (Git)
+### 5. Understanding of Source Control (Git)
 * You don’t need to be a Git expert, but you should:
 
 * Know how to clone, commit, and push
 
 * Be able to manage basic branches
 
-### ✅ 6. Familiarity with YAML & Configuration Files
+### 6. Familiarity with YAML & Configuration Files
 * Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
 
-### ✅ 7. Optional but Helpful: Linux Fundamentals
+### 7. Optional but Helpful: Linux Fundamentals
 * Knowing basic file system layout (e.g., /etc, /usr, /var)
 
 * Managing permissions
@@ -79,19 +79,21 @@ before you start any installation.
 
 ### Look for:
 
-. System type
+→ System type
 
-. If it says "64-bit operating system, x64-based processor" → ### You're on amd64
+. If it says "64-bit operating system, x64-based processor" 
+ ### You're on amd64
 
-. If it says "64-bit operating system, ARM-based processor" → ### You're on arm64
+. If it says "64-bit operating system, ARM-based processor" 
+ ### You're on arm64
 
 ### For Linux Os in the Cloud or WSL on Windows, follow this instructions:
 
 * Linux: Use your distro's package manager
 
-. sudo apt install docker.io
-. sudo systemctl start docker
-. sudo systemctl enable docker
+* sudo apt install docker.io
+* sudo systemctl start docker
+* sudo systemctl enable docker
 
 * Make sure to verify your installation:
 
@@ -102,13 +104,13 @@ before you start any installation.
 
 * Command	Description
 
-. docker ps	List running containers
-. docker images	List local images
-. docker pull	Download image from Docker Hub
-. docker run	Start container
-. docker stop	Stop container
+* docker ps	List running containers
+* docker images	List local images
+* docker pull	Download image from Docker Hub
+* docker run	Start container
+* docker stop	Stop container
 
-. docker run -d -p 80:80 nginx
+* docker run -d -p 80:80 nginx
 
 * This runs NGINX in the background and maps port 80.
 
@@ -116,10 +118,8 @@ before you start any installation.
 
 * Create a file called Dockerfile:
 
-Dockerfile
+### Dockerfile, example:
 
-Copy
-Edit
 FROM python:3.10
 COPY . /app
 WORKDIR /app
@@ -128,10 +128,10 @@ CMD ["python", "app.py"]
 
 * Then build and run:
 
-. docker build -t my-python-app .
-. docker run -p 5000:5000 my-python-app
+* docker build -t my-python-app .
+* docker run -p 5000:5000 my-python-app
 
-### 6. Docker Compose (Optional Next Step)
+### 6. Docker Compose (COMPLETELY Optional, but you should knbow it exist)
 
 * Use Compose for multi-container apps:
 
@@ -146,7 +146,7 @@ services:
     
 * Run it:
 
-. docker-compose up
+* docker-compose up
 
 ### What to keep in mind:
 
