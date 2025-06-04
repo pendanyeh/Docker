@@ -37,7 +37,7 @@
 - Administrative or root access for installation
 - Reliable internet connection to download Docker images and updates
 
-## Conmmonly used terminology: Docker Engine, Docker Daemon, Docker Desktop
+## Conmmonly used terminology: Docker Engine, Docker Daemon, Docker Desktop, Dockerhub
 
 ## 1. Docker Engine
 
@@ -87,21 +87,9 @@ It operates on Linux and handles all container-related tasks.
 | Docker Daemon  | The backend service that does the work (inside Engine) |
 | Docker Hub     | Cloud-based image storage & distribution service       |
  
-+-------------------+         +-------------------+         +-------------------+
-|                   |         |                   |         |                   |
-|  Docker Desktop   +-------->+  Docker Engine    +-------->+  Docker Daemon    |
-| (GUI & Tools)     |         | (Container Mgmt)  |         | (Runs Containers) |
-|                   |         |                   |         |                   |
-+-------------------+         +-------------------+         +-------------------+
-         |
-         v
-+-------------------+
-|                   |
-|   Docker Hub      |
-| (Image Registry)  |
-|                   |
-+-------------------+
+![image](https://github.com/user-attachments/assets/6026d7f1-9c85-4bdc-a173-2cbd1345c3fd)
 
+## Follow the link below to the website
 https://docs.docker.com/get-started/images/docker-architecture.webp
 
 # Prerequisites
@@ -277,7 +265,8 @@ services:
 
 **Diagram: Virtual Machines vs Containers**
 
-![image](https://github.com/user-attachments/assets/f30cffad-49f0-45cb-9048-0d5e95eb5e0f)
+![image](https://github.com/user-attachments/assets/29c0e35a-83c3-4686-acd8-2edabe182046)
+
 
 
 - **VMs:** Each application runs inside its own OS, managed by a hypervisor.
