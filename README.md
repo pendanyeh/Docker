@@ -59,7 +59,7 @@ It operates on Linux and handles all container-related tasks.
 ## 3. Docker Desktop 
 
 - An all-in-one application for Mac and Windows that provides a graphical interface and environment for Docker.
-- 
+  
 **It comes with:**
   
 - Docker Engine (including the Daemon)
@@ -268,6 +268,11 @@ services:
 - **VMs:** Each application runs inside its own OS, managed by a hypervisor.
 - **Containers:** Applications share the host OS kernel, making them more efficient and faster to start.
 
+**Diagram: Virtual Machines vs Containers**
+
+![image](https://github.com/user-attachments/assets/29c0e35a-83c3-4686-acd8-2edabe182046)
+
+
 ### What is a Kernel?
 
 **Definition:**  
@@ -279,6 +284,8 @@ services:
 -  Process scheduling
 -  File system operations, and
 -  Device input/output. 
+
+### Critical notice
 
 **Applications access hardware resources through the kernel rather than directly for several important reasons:**
 
@@ -295,9 +302,6 @@ services:
 ![image](https://github.com/user-attachments/assets/54142db8-4d77-4139-920e-1180cb16b792)
 
 
-**Diagram: Virtual Machines vs Containers**
-
-![image](https://github.com/user-attachments/assets/29c0e35a-83c3-4686-acd8-2edabe182046)
 
 
 
