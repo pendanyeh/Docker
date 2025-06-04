@@ -319,7 +319,83 @@ services:
 
 ![image](https://github.com/user-attachments/assets/54142db8-4d77-4139-920e-1180cb16b792)
 
+## Each step in the Docker development workflow:
 
+1. ***Developers write code:***
+   
+   **Developers develop the application using the preferred programming language and tools.**
+
+2. ***Create a Dockerfile:***
+
+   Developers write a `Dockerfile` that describes how to package the application, including dependencies, build steps, and how to run it.
+
+3. ***Build the Image:***  
+
+   Using the command `docker build`, you create a Docker image based on your Dockerfile. This image contains everything needed to run your app.
+
+4. ***Run the Container:***  
+
+   You start a container from your image with `docker run`. This launches your app in an isolated environment.
+
+5. ***Test and Debug:***  
+
+   You test your application inside the container. If you find issues, you update your code or Dockerfile, then rebuild and rerun the container.
+
+6. ***Tag and Push Image:***  
+
+   Once your app works as expected, you tag the image and push it to a container registry (like Docker Hub) so others can access it.
+
+7. ***Deploy:***  
+
+   In production or staging, you pull the image from the registry and run it as a container, ensuring consistency across environments.
+
+***This workflow helps develop, test, and deploy applications efficiently and reliably using Docker.***
+
+## Workflow Commands
+
+Here’s the complete Docker development workflow with all key commands, including login:
+
+1. **Log in to Docker Hub (or your registry):**
+   ```
+   docker login
+   ```
+
+2. **Build your Docker image:**
+   ```
+   docker build -t username/your-image-name:tag .
+   ```
+
+3. **Run a container from your image:**
+   ```
+   docker run -p 8080:80 username/your-image-name:tag
+   ```
+
+4. **List running containers:**
+   ```
+   docker ps
+   ```
+
+5. **Stop a running container:**
+   ```
+   docker stop <container_id>
+   ```
+
+6. **Tag your image (if needed):**
+   ```
+   docker tag your-image-name username/your-image-name:tag
+   ```
+
+7. **Push your image to Docker Hub:**
+   ```
+   docker push username/your-image-name:tag
+   ```
+
+8. **Pull your image from Docker Hub (on another machine or server):**
+   ```
+   docker pull username/your-image-name:tag
+   ```
+
+Replace `username`, `your-image-name`, `tag`, and `<container_id>` with your actual Docker Hub username, image name, tag, and container ID.
 
 
 
