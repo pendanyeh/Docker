@@ -1,6 +1,37 @@
+# Introduction to Docker and what a Devops and Cloud engineer should know about this tool.
+
 # Repo to learn Docker with examples. Contributions are most welcome.
 
-## If you found this repo useful, give it a STAR 🌠
+### Prerequisites
+
+** 1. Basic Linux Knowledge
+Understanding of Linux file system, permissions, and common commands (cd, ls, cat, chmod, etc.)
+
+Experience with a terminal or shell
+
+** 2. Command-Line Familiarity
+Comfortable using the command line to execute and manage programs
+
+Familiar with text editors like vim, nano, or VSCode
+
+** 3. Networking Fundamentals
+Basic concepts like IP addresses, ports, DNS, and firewalls
+
+Understanding of HTTP/HTTPS protocols and client-server architecture
+
+** 4. Software Development Basics
+Familiarity with at least one programming language (e.g., Python, Java, JavaScript)
+
+Understanding how applications are structured (frontend, backend, database)
+
+** 5. Version Control (Git)
+Knowing how to clone a repo, commit changes, and use branches
+
+** 6. Virtualization Concepts (Optional but Helpful)
+Understanding the difference between virtual machines and containers
+
+With all that said, let's move on to the next lesson topic:
+
 
 ## What is a container?
 
@@ -357,3 +388,7 @@ latest: digest: sha256:6e49841ad9e720a7baedcd41f9b666fcd7b583151d0763fe78101bb82
 ```
 
 ### You must be feeling like a champ already right 
+
+## If you found this repo useful, give it a STAR 🌠
+
+
