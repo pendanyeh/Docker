@@ -37,7 +37,7 @@
 - Administrative or root access for installation
 - Reliable internet connection to download Docker images and updates
 
-# Conmmonly used terminology: Docker Engine, Docker Daemon, Docker Desktop
+## Conmmonly used terminology: Docker Engine, Docker Daemon, Docker Desktop
 
 ## 1. Docker Engine
 
@@ -49,14 +49,14 @@
 - Docker Command Line Interface (docker)
 It operates on Linux and handles all container-related tasks.
 
-**2. Docker Daemon (`dockerd`)**  
+## 2. Docker Daemon (`dockerd`)
 
 - This is the background process that manages containers.  
 - It listens for Docker API requests (from the CLI, Docker Desktop, etc.), and is responsible for starting and
   stopping containers, as well as managing images, volumes, and networks.  
 - It’s a key part of the Docker Engine.
 
-**3. Docker Desktop**  
+## 3. Docker Desktop 
 
 - An all-in-one application for Mac and Windows that provides a graphical interface and environment for Docker.
 - 
@@ -78,7 +78,7 @@ It operates on Linux and handles all container-related tasks.
 - It allows you to upload, download, and share Docker images.
 - Supports both public and private repositories.
 
-**Breakdown note:**  
+## Breakdown note:
 
 | Component      | Role                                                   |
 | -------------- | ------------------------------------------------------ |
