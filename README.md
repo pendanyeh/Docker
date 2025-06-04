@@ -4,32 +4,54 @@
 
 ### Prerequisites
 
-### 1. Basic Linux Knowledge
-Understanding of Linux file system, permissions, and common commands (cd, ls, cat, chmod, etc.)
+### ✅ 1. Basic Command Line Skills
+* You should be comfortable with:
 
-Experience with a terminal or shell
+* Navigating directories (cd, ls, pwd)
 
-### 2. Command-Line Familiarity
-Comfortable using the command line to execute and manage programs
+* Editing files (nano, vim, or using VS Code)
 
-Familiar with text editors like vim, nano, or VSCode
+* Running scripts and installing packages
 
-### 3. Networking Fundamentals
-Basic concepts like IP addresses, ports, DNS, and firewalls
+✅ 2. Operating Systems & Virtualization Concepts
+Understand how traditional applications run on OSes
 
-Understanding of HTTP/HTTPS protocols and client-server architecture
+Know what virtual machines are (optional but useful)
 
-** 4. Software Development Basics
-Familiarity with at least one programming language (e.g., Python, Java, JavaScript)
+Learn the difference between VMs vs Containers
 
-Understanding how applications are structured (frontend, backend, database)
+✅ 3. Networking Basics
+What are ports and IP addresses
 
-### 5. Version Control (Git)
-Knowing how to clone a repo, commit changes, and use branches
+What is localhost
 
-### 6. Virtualization Concepts (Optional but Helpful)
-Understanding the difference between virtual machines and containers
+Basics of client-server communication (e.g., HTTP)
 
+✅ 4. Software Development & Deployment Basics
+Know what builds, environments, and dependencies are
+
+Familiarity with package managers (e.g., npm, pip, apt)
+
+Concept of an application stack (e.g., Node.js + MongoDB)
+
+✅ 5. Understanding of Source Control (Git)
+You don’t need to be a Git expert, but you should:
+
+Know how to clone, commit, and push
+
+Be able to manage basic branches
+
+✅ 6. Familiarity with YAML & Configuration Files
+Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
+
+✅ 7. Optional but Helpful: Linux Fundamentals
+Knowing basic file system layout (e.g., /etc, /usr, /var)
+
+Managing permissions
+
+Running services or daemons
+
+Once you're comfortable with these, start learning Docker with small projects—like containerizing a simple web app.
 With all that said, let's move on to the next lesson topic:
 
 
