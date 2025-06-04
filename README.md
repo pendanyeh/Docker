@@ -4,9 +4,10 @@
 
 ## Requirements for Docker Desktop installation
 
-**Docker Desktop on Windows**
+***Docker Desktop on Windows***
 
-**System Requirements:**
+***System Requirements:***
+
 - Windows 10 64-bit (Pro, Enterprise, or Education, Build 19044 or newer)
 - Windows 11 64-bit (all editions)
 - WSL 2 (Windows Subsystem for Linux v2) must be installed and enabled
@@ -16,14 +17,15 @@
 
 **Docker Desktop on macOS**  
 
-**System Requirements:**
+***System Requirements:***
+
 - macOS Monterey 12.5 or later, including Ventura
 - Compatible with both Apple Silicon (M1/M2, Rosetta 2 needed for some x86 images) and Intel Macs
 - Minimum 4 GB RAM
 
 **Docker Desktop on Linux**  
 
-**System Requirements (Preview/Stable for Some Distros):**
+***System Requirements (Preview/Stable for Some Distros):***
 
 - Supported distributions: Ubuntu 22.04+, Debian 11+, Fedora 35+
 - 64-bit architecture
@@ -32,14 +34,14 @@
 - At least 4 GB RAM
 - Kernel version 5.15 or newer
 
-**General Requirements for All Platforms:**
+### General Requirements for All Platforms:
 
 - Administrative or root access for installation
 - Reliable internet connection to download Docker images and updates
 
 ## Commonly used terminology: Docker Engine, Docker Daemon, Docker Desktop, Dockerhub
 
-## 1. Docker Engine
+***1. Docker Engine***
 
 - The main part of Docker, responsible for building, running, and managing containers.  
 
@@ -49,14 +51,14 @@
 - Docker Command Line Interface (docker)
 It operates on Linux and handles all container-related tasks.
 
-## 2. Docker Daemon (`dockerd`)
+***2. Docker Daemon (`dockerd`)***
 
 - This is the background process that manages containers.  
 - It listens for Docker API requests (from the CLI, Docker Desktop, etc.), and is responsible for starting and
   stopping containers, as well as managing images, volumes, and networks.  
 - It’s a key part of the Docker Engine.
 
-## 3. Docker Desktop 
+***3. Docker Desktop*** 
 
 - An all-in-one application for Mac and Windows that provides a graphical interface and environment for Docker.
   
@@ -70,7 +72,7 @@ It operates on Linux and handles all container-related tasks.
 
 - Docker Desktop simplifies Docker usage for developers by handling setup and configuration.
   
-## 4. Dockerhub
+***4. Dockerhub***
 
 **Docker Hub**  
 
@@ -97,7 +99,7 @@ https://docs.docker.com/get-started/images/docker-architecture.webp
 
 # Prerequisites
 
-## 1. Basic Command Line Skills
+***1. Basic Command Line Skills***
 
 **You should be comfortable with:**
 
@@ -107,7 +109,7 @@ https://docs.docker.com/get-started/images/docker-architecture.webp
 
 * Running scripts and installing packages
 
-## 2. Operating Systems & Virtualization Concepts
+***2. Operating Systems & Virtualization Concepts***
 
 * Understand how traditional applications run on OSes
 
@@ -115,31 +117,35 @@ https://docs.docker.com/get-started/images/docker-architecture.webp
 
 * Learn the difference between VMs vs Containers
 
-## 3. Networking Basics
+***3. Networking Basics***
+
 * What are ports and IP addresses
 
 * What is localhost
 
 * Basics of client-server communication (e.g., HTTP)
 
-## 4. Software Development & Deployment Basics
+***4. Software Development & Deployment Basics***
 * Know what builds, environments, and dependencies are
 
 * Familiarity with package managers (e.g., npm, pip, apt)
 
 * Concept of an application stack (e.g., Node.js + MongoDB)
 
-## 5. Understanding of Source Control (Git)
+***5. Understanding of Source Control (Git)***
+
 * You don’t need to be a Git expert, but you should:
 
 * Know how to clone, commit, and push
 
 * Be able to manage basic branches
 
-## 6. Familiarity with YAML & Configuration Files
+***6. Familiarity with YAML & Configuration Files***
+
 * Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
 
-## 7. Optional but Helpful: Linux Fundamentals
+***7. Optional but Helpful: Linux Fundamentals***
+
 * Knowing basic file system layout (e.g., /etc, /usr, /var)
 
 * Managing permissions
@@ -153,10 +159,12 @@ https://docs.docker.com/get-started/images/docker-architecture.webp
 # 🐳 Getting Started with Docker: 
 
 ## 1. What is Docker?
+
 * Docker is a containerization tool that packages applications and their dependencies into containers.
   Containers are lightweight, fast, and portable across environments—ideal for DevOps.
 
 ## 2. Why Use Docker?
+
 * Works the same on any system (dev, staging, prod)
 
 * Fast startup, isolated environments
@@ -165,9 +173,9 @@ https://docs.docker.com/get-started/images/docker-architecture.webp
 
 ## 3. Install Docker
 
-Ways to install Docker, Cloud based installation or Locally based installation. For the latter,
-find the link below. Window users please make sure to check if your Windows OS is AMD64 or ARM64
-before you start any installation.
+**Ways to install Docker: Cloud-based installation or locally based installation. For the latter,**
+**Find the link below. Window users, please make sure to check if your Windows OS is AMD64 or ARM64**
+**before you start any installation.**
 
 * Windows/macOS: Install Docker Desktop from https://www.docker.com/products/docker-desktop
 * For Windows OS, Open Settings > System > About
@@ -268,7 +276,7 @@ services:
 - **VMs:** Each application runs inside its own OS, managed by a hypervisor.
 - **Containers:** Applications share the host OS kernel, making them more efficient and faster to start.
 
-**Diagram: Virtual Machines vs Containers**
+### Diagram: Virtual Machines vs Containers
 
 ![image](https://github.com/user-attachments/assets/29c0e35a-83c3-4686-acd8-2edabe182046)
 
