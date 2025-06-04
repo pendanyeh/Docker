@@ -2,11 +2,97 @@
 
 ## Repo to learn Docker with examples. Contributions are most welcome.
 
+## Requirements for Docker Desktop installation
+
+## Docker Desktop on Windows
+
+**System Requirements:**
+- Windows 10 64-bit (Pro, Enterprise, or Education, Build 19044 or newer)
+- Windows 11 64-bit (all editions)
+- WSL 2 (Windows Subsystem for Linux v2) must be installed and enabled
+- Virtualization enabled in BIOS (Intel VT-x or AMD-V)
+- At least 4 GB RAM (8 GB or more recommended)
+- Hyper-V and Containers features enabled in Windows
+
+**Docker Desktop on macOS**  
+**System Requirements:**
+- macOS Monterey 12.5 or later, including Ventura
+- Compatible with both Apple Silicon (M1/M2, Rosetta 2 needed for some x86 images) and Intel Macs
+- Minimum 4 GB RAM
+
+**Docker Desktop on Linux**  
+**System Requirements (Preview/Stable for Some Distros):**
+- Supported distributions: Ubuntu 22.04+, Debian 11+, Fedora 35+
+- 64-bit architecture
+- systemd as the init system
+- Virtualization support
+- At least 4 GB RAM
+- Kernel version 5.15 or newer
+
+**General Requirements for All Platforms:**
+- Administrative or root access for installation
+- Reliable internet connection to download Docker images and updates
+
+# Conmmonly used terminology: Docker Engine, Docker Daemon, Docker Desktop
+
+## 1. Docker Engine
+
+The main part of Docker, responsible for building, running, and managing containers.  
+It works as a client-server application and includes:
+- Docker Daemon (`dockerd`)
+- Docker Command Line Interface (docker)
+It operates on Linux and handles all container-related tasks.
+
+**2. Docker Daemon (`dockerd`)**  
+This is the background process that manages containers.  
+It listens for Docker API requests (from the CLI, Docker Desktop, etc.), and is responsible for starting and stopping containers, as well as managing images, volumes, and networks.  
+It’s a key part of the Docker Engine.
+
+**3. Docker Desktop**  
+An all-in-one application for Mac and Windows that provides a graphical interface and environment for Docker.  
+It comes with:
+- Docker Engine (including the Daemon)
+- Docker CLI
+- Optional Kubernetes support
+- A GUI dashboard
+- WSL 2 integration (on Windows)
+Docker Desktop simplifies Docker usage for developers by handling setup and configuration.
+## 4. Dockerhub
+**Docker Hub**  
+An online registry service (similar to GitHub, but for Docker images).
+
+It allows you to upload, download, and share Docker images.
+
+Supports both public and private repositories.
+
+**Summary:**  
+Component | Description  
+--- | ---  
+Docker Desktop | Graphical interface and all-in-one setup for developers  
+Docker Engine | The core platform that runs and manages containers  
+Docker Daemon | The background process within the Engine that handles container operations  
+Docker Hub | Online service for storing and sharing container images
+
+| Component      | Role                                                   |
+| -------------- | ------------------------------------------------------ |
+| Docker Desktop | GUI + bundled setup for developers                     |
+| Docker Engine  | The container platform powering everything             |
+| Docker Daemon  | The backend service that does the work (inside Engine) |
+| Docker Hub     | Cloud-based image storage & distribution service       |
+
+
+Docker Desktop is the easy-to-use package for developers.  
+Docker Engine is the main platform for running containers.  
+Docker Daemon is the background service that does the actual work.
+
+ 
+*******************************************
+
 # Prerequisites
 
 ## 1. Basic Command Line Skills
 
-* You should be comfortable with:
+→ You should be comfortable with:
 
 * Navigating directories (cd, ls, pwd)
 
@@ -85,11 +171,11 @@ before you start any installation.
 
 * If it says "64-bit operating system, x64-based processor" 
 
- ### You're on amd64
+ ### You're on AMD64
 
 * If it says "64-bit operating system, ARM-based processor"
   
- ### You're on arm64
+ ### You're on ARM64
 
 ### For Linux Os in the Cloud or WSL on Windows, follow this instructions:
 
