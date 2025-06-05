@@ -399,6 +399,46 @@ services:
 
 Replace `username`, `your-image-name`, `tag`, and `<container_id>` with your actual Docker Hub username, image name, tag, and container ID.
 
+## To delete a Docker container or image, you use the following Docker commands. Here’s how:
+
+Here are the Docker commands to delete both containers and images:
+
+###Delete a Container
+
+**Delete a specific container:**
+```
+docker rm <container_name_or_id>
+```
+```
+docker rm bmt-test-container
+```
+
+**First, stop it if it's running:**
+```
+docker stop bmt-test-container
+```
+```
+docker rm bmt-test-container
+```
+**Delete all stopped containers:**
+```
+docker container prune
+```
+##Delete a Docker Image
+
+**Delete a specific image:**
+```
+docker rmi <image_name_or_id>
+```
+***Example:***
+```
+docker rmi nginx
+```
+##Delete all unused images:
+```
+docker image prune
+```
+
 
 
    #####################################################
