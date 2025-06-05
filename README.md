@@ -406,17 +406,19 @@ Here are the Docker commands to delete both containers and images:
 ###Delete a Container
 
 **Delete a specific container:**
-```
-docker rm <container_name_or_id>
-```
+
+***docker rm <container_name_or_id>***
+
 ```
 docker rm bmt-test-container
 ```
 
 **First, stop it if it's running:**
-```
-docker stop bmt-test-container
-```
+
+***docker stop <container_name_or_id>***
+
+**Example**
+
 ```
 docker rm bmt-test-container
 ```
@@ -424,17 +426,17 @@ docker rm bmt-test-container
 ```
 docker container prune
 ```
-##Delete a Docker Image
+## Delete a Docker Image
 
 **Delete a specific image:**
-```
-docker rmi <image_name_or_id>
-```
+
+***docker rmi <image_name_or_id>***
+
 ***Example:***
 ```
 docker rmi nginx
 ```
-##Delete all unused images:
+## Delete all unused images:
 ```
 docker image prune
 ```
