@@ -1,1 +1,1 @@
-console.log("Welcome to BMT");
+console.log("Welcome to BMT. This is a Dockerized Node.js application.");
