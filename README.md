@@ -182,12 +182,22 @@ https://hub.docker.com/
 
 ***Some important links to check:***
 
+**Docker Desktop download**
+
+```
   https://docs.docker.com/desktop/setup/install/windows-install/
+```
   
-  https://docs.docker.com/engine/install/
-  
-  https://app.docker.com/
-  
+***Create a DockerHub account:***
+
+```
+https://app.docker.com/signup/?_gl=1*1az2fao*_ga*NjgzOTMzNjQzLjE3NDkyMDgyMDk.*_ga_XJWPQMJYHQ*czE3NDkyMDgyMDgkbzEkZzEkdDE3NDkyMDgyMDkkajU5JGwwJGgw
+```
+
+  ```
+https://app.docker.com/
+  ```
+
 * Check your Windows OS: Open Settings > System > About
 
 ### Look for:
