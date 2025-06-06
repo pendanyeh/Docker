@@ -401,9 +401,9 @@ Replace `username`, `your-image-name`, `tag`, and `<container_id>` with your act
 
 ## To delete a Docker container or image, you use the following Docker commands. Here’s how:
 
-Here are the Docker commands to delete both containers and images:
+## Here are the Docker commands to delete both containers and images:
 
-###Delete a Container
+### Delete a Container
 
 **Delete a specific container:**
 
