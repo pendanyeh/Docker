@@ -536,7 +536,7 @@ services:
    docker run -p 8080:80 username/your-image-name:tag
    ```
 
-4. **List running containers:**
+4. **List running containers:(Optional)**
    ```
    docker ps
    ```
