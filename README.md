@@ -472,7 +472,7 @@ docker rmi e41698f75c81
 docker rmi -f e41698f75c81
 ```
 
-## Notice: Use this only if you're sure you don’t need the container.
+## Notice: Use this only if you're sure you don’t need the container. For practice purposes, it doesn't matter.
 
 
 
