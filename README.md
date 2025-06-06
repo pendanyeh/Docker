@@ -319,6 +319,51 @@ services:
 
 ![image](https://github.com/user-attachments/assets/54142db8-4d77-4139-920e-1180cb16b792)
 
+### A comprehensive table comparing **Docker** and **Kubernetes**, including their definitions, advantages, disadvantages, how they work together, and the problems they solve:
+
+| Aspect                | Docker                                                                                      | Kubernetes                                                                                   |
+|-----------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| **Definition**        | Platform for building, packaging, and running applications in containers                   | Container orchestration system for automating deployment, scaling, and management of containers|
+| **Primary Role**      | Containerization: creates and runs containers                                              | Orchestration: manages containers across multiple hosts (cluster)                             |
+| **Scope**             | Single host                                                                                | Multi-host (cluster)                                                                          |
+| **Advantages**        | - Portability<br>- Consistency<br>- Isolation<br>- Lightweight<br>- Fast startup           | - Automated scaling<br>- Self-healing<br>- Load balancing<br>- Rolling updates/rollbacks<br>- Multi-host management |
+| **Disadvantages**     | - Limited to single host<br>- Manual scaling<br>- No built-in orchestration                | - Steep learning curve<br>- More complex setup<br>- Higher resource and operational overhead  |
+| **Problem Solved**    | Simplifies packaging, shipping, and running applications in a consistent environment       | Automates deployment, scaling, and management of containers for high availability and resilience|
+| **How They Work Together** | Docker builds and runs containers; Kubernetes deploys, scales, and manages those containers across clusters | Docker containers are orchestrated by Kubernetes for production-grade deployments             |
+| **Typical Workflow**  | 1. Write code<br>2. Create Dockerfile<br>3. Build image<br>4. Run container<br>5. Test/debug<br>6. Tag/push image<br>7. Deploy | 1. Build Docker image<br>2. Push to registry<br>3. Define Kubernetes manifests<br>4. Deploy to cluster<br>5. Kubernetes manages scaling, updates, and health checks |
+| **Use Case**          | Packaging and running single or a few containers on a developer’s machine or server        | Managing, scaling, and operating many containers in production environments                   |
+
+---
+
+## How They Work Together:
+
+- ### Docker
+  
+ **It is used to package and run your application in containers.**
+
+- ### Kubernetes
+
+  **It is used to deploy, scale, and manage those containers across a cluster of machines.**
+
+---
+
+**Summary Table**
+
+| Feature            | Docker                                   | Kubernetes                                 |
+|--------------------|------------------------------------------|--------------------------------------------|
+| Purpose            | Containerization platform                | Container orchestration platform           |
+| Scope              | Single host                              | Multi-host (cluster)                       |
+| Scaling            | Manual                                   | Automated                                  |
+| Self-Healing       | No                                       | Yes                                        |
+| Load Balancing     | No (basic only)                          | Yes                                        |
+| Complexity         | Simple                                   | Complex                                    |
+| Use Case           | Packaging and running containers         | Managing, scaling, and deploying containers|
+
+---
+
+
+
+
 ## Each step in the Docker development workflow:
 
 1. ***Developers write code:***
