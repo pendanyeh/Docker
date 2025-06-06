@@ -403,6 +403,15 @@ Replace `username`, `your-image-name`, `tag`, and `<container_id>` with your act
 
 ## Here are the Docker commands to delete both containers and images:
 
+## Best option to delete both the container and the image at the same time by passing the -f flag:
+
+```
+docker rmi -f <image-name-or-id>
+
+```
+
+***That will forcibly remove the image and any stopped containers using it, but first, make sure to stop the running container***
+
 ### Delete a Container
 
 **Delete a specific container:**
