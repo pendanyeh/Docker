@@ -1,1 +1,1 @@
-console.log("Welcome to BMT. This is a Dockerized Node.js application.");
+console.log("Welcome to BMT. This is a Dockerized Node.js application. Build with Docker and Node.js!. Docker is a platform that allows you to develop, ship, and run applications in containers. Containers are lightweight, portable, and self-sufficient units that can run anywhere. Docker makes it easy to create, deploy, and manage applications in a consistent environment. Enjoy your journey with Docker and Node.js!");
