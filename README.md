@@ -593,6 +593,33 @@ docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"
 
 ***Then, visually match the IMAGE column with your image ID or name.***
 
+## You can also see how much space Docker is currently using in your system by running:
+
+```
+docker system df
+```
+
+***This command shows disk usage by images, containers, and volumes.***
+
+
+## To clean up unused data, you can run:
+
+```
+docker system prune
+```
+
+*(This will remove unused images, containers, and networks. Use with caution.)*
+
+
+
+## To reclaim this space, run:
+
+```
+docker system prune -a --volumes
+```
+
+*(This will remove all unused images, containers, and volumes. Use with caution!)*
+
 
 
    #######################################################################################################
