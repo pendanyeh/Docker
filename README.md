@@ -89,7 +89,7 @@ It operates on Linux and handles all container-related tasks.
 | Docker Daemon  | The backend service that does the work (inside Engine) |
 | Docker Hub     | Cloud-based image storage & distribution service       |
  
-# Docker Architecture in a diagram 
+# Docker Architecture  
 
 ![image](https://github.com/user-attachments/assets/6026d7f1-9c85-4bdc-a173-2cbd1345c3fd)
 
@@ -99,9 +99,9 @@ https://hub.docker.com/
 
 # Prerequisites
 
-***1. Basic Command Line Skills***
+## 1. Basic Command Line Skills
 
-**You should be comfortable with:**
+***You should be comfortable with:***
 
 * Navigating directories (cd, ls, pwd)
 
@@ -109,7 +109,7 @@ https://hub.docker.com/
 
 * Running scripts and installing packages
 
-***2. Operating Systems & Virtualization Concepts***
+## 2. Operating Systems & Virtualization Concepts
 
 * Understand how traditional applications run on OSes
 
@@ -117,7 +117,7 @@ https://hub.docker.com/
 
 * Learn the difference between VMs vs Containers
 
-***3. Networking Basics***
+## 3. Networking Basics
 
 * What are ports and IP addresses
 
@@ -125,14 +125,15 @@ https://hub.docker.com/
 
 * Basics of client-server communication (e.g., HTTP)
 
-***4. Software Development & Deployment Basics***
+## 4. Software Development & Deployment Basics
+
 * Know what builds, environments, and dependencies are
 
 * Familiarity with package managers (e.g., npm, pip, apt)
 
 * Concept of an application stack (e.g., Node.js + MongoDB)
 
-***5. Understanding of Source Control (Git)***
+## 5. Understanding of Source Control (Git)
 
 * You don’t need to be a Git expert, but you should:
 
@@ -140,11 +141,11 @@ https://hub.docker.com/
 
 * Be able to manage basic branches
 
-***6. Familiarity with YAML & Configuration Files***
+## 6. Familiarity with YAML & Configuration Files
 
 * Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
 
-***7. Optional but Helpful: Linux Fundamentals***
+## 7. Optional but Helpful: Linux Fundamentals
 
 * Knowing basic file system layout (e.g., /etc, /usr, /var)
 
@@ -177,16 +178,27 @@ https://hub.docker.com/
 **Find the link below. Window users, please make sure to check if your Windows OS is AMD64 or ARM64**
 **before you start any installation.**
 
-* Windows/macOS: Install Docker Desktop from: https://www.docker.com/products/docker-desktop
+* Windows/macOS: Docker Desktop Installation
 
-***Some important links to check:***
+***Docker Desktop installation***
 
-  https://docs.docker.com/desktop/setup/install/windows-install/
+```
+https://www.docker.com/products/docker-desktop
+```
+
+**Docker Desktop System Requirements, etc.**
+
+```
+https://docs.docker.com/desktop/setup/install/windows-install/
+```
   
-  https://docs.docker.com/engine/install/
-  
-  https://app.docker.com/
-  
+***Create a DockerHub account:***
+
+```
+https://app.docker.com/signup/?_gl=1*1az2fao*_ga*NjgzOTMzNjQzLjE3NDkyMDgyMDk.*_ga_XJWPQMJYHQ*czE3NDkyMDgyMDgkbzEkZzEkdDE3NDkyMDgyMDkkajU5JGwwJGgw
+```
+
+
 * Check your Windows OS: Open Settings > System > About
 
 ### Look for:
@@ -232,8 +244,77 @@ https://hub.docker.com/
 
 * Create a file called Dockerfile:
 
-### Dockerfile, example:
+### Dockerfile, some examples:
 
+**A simple Dockerfile for Node.js**
+```
+FROM node:alpine
+
+# Copy the files from the host file system to the image file system
+COPY . /app
+
+# Set the working directory in the image
+WORKDIR /app
+
+# Run a command to start the application
+CMD node app.js 
+```
+**A Complex Dockerfile for Multi-stage **
+
+```
+# Stage 1: Build dependencies
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+RUN npm install --production=false
+
+# Copy source code
+COPY . .
+
+# Optional: Run tests or build steps here
+# RUN npm test
+# RUN npm run build
+
+# Stage 2: Production image
+FROM node:18-alpine
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV PORT=3000
+
+WORKDIR /app
+
+# Create a non-root user
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+# Copy only necessary files from builder
+COPY --from=builder /app /app
+
+# Install only production dependencies
+RUN npm ci --only=production
+
+# Set permissions
+RUN chown -R appuser:appgroup /app
+
+USER appuser
+
+# Expose port
+EXPOSE 3000
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+  CMD node -e "require('net').connect(process.env.PORT, '127.0.0.1').on('error', () => process.exit(1))"
+
+# Start the application
+CMD ["node", "app.js"]
+
+```
+**A Python Dockerfile**
+
+```
 FROM python:3.10
 COPY . /app
 WORKDIR /app
@@ -261,6 +342,7 @@ services:
 * Run it:
 
 * docker-compose up
+```
 
 ## What to keep in mind:
 
@@ -315,9 +397,91 @@ services:
   
 - **Stability:** By controlling hardware access, the kernel helps prevent crashes and system instability caused by faulty or malicious applications.
 
-### The kernel acts as a protective and organizing layer between applications and hardware. Take a look at the diagram below
+## The kernel acts as a protective and organizing layer between applications and hardware. Take a look at the diagram below
 
 ![image](https://github.com/user-attachments/assets/54142db8-4d77-4139-920e-1180cb16b792)
+
+## A comprehensive table comparing Docker and Kubernetes, including their definitions, advantages, disadvantages, how they work together, and the problems they solve:
+
+| Aspect                | Docker                                                                                      | Kubernetes                                                                                   |
+|-----------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| **Definition**        | Platform for building, packaging, and running applications in containers                   | Container orchestration system for automating deployment, scaling, and management of containers|
+| **Primary Role**      | Containerization: creates and runs containers                                              | Orchestration: manages containers across multiple hosts (cluster)                             |
+| **Scope**             | Single host                                                                                | Multi-host (cluster)                                                                          |
+| **Advantages**        | - Portability<br>- Consistency<br>- Isolation<br>- Lightweight<br>- Fast startup           | - Automated scaling<br>- Self-healing<br>- Load balancing<br>- Rolling updates/rollbacks<br>- Multi-host management |
+| **Disadvantages**     | - Limited to single host<br>- Manual scaling<br>- No built-in orchestration                | - Steep learning curve<br>- More complex setup<br>- Higher resource and operational overhead  |
+| **Problem Solved**    | Simplifies packaging, shipping, and running applications in a consistent environment       | Automates deployment, scaling, and management of containers for high availability and resilience|
+| **How They Work Together** | Docker builds and runs containers; Kubernetes deploys, scales, and manages those containers across clusters | Docker containers are orchestrated by Kubernetes for production-grade deployments             |
+| **Typical Workflow**  | 1. Write code<br>2. Create Dockerfile<br>3. Build image<br>4. Run container<br>5. Test/debug<br>6. Tag/push image<br>7. Deploy | 1. Build Docker image<br>2. Push to registry<br>3. Define Kubernetes manifests<br>4. Deploy to cluster<br>5. Kubernetes manages scaling, updates, and health checks |
+| **Use Case**          | Packaging and running single or a few containers on a developer’s machine or server        | Managing, scaling, and operating many containers in production environments                   |
+
+---
+
+## How They Work Together:
+
+- ### Docker
+  
+ **It is used to package and run your application in containers.**
+
+- ### Kubernetes
+
+  **It is used to deploy, scale, and manage those containers across a cluster of machines.**
+
+---
+
+**Summary Table**
+
+| Feature            | Docker                                   | Kubernetes                                 |
+|--------------------|------------------------------------------|--------------------------------------------|
+| Purpose            | Containerization platform                | Container orchestration platform           |
+| Scope              | Single host                              | Multi-host (cluster)                       |
+| Scaling            | Manual                                   | Automated                                  |
+| Self-Healing       | No                                       | Yes                                        |
+| Load Balancing     | No (basic only)                          | Yes                                        |
+| Complexity         | Simple                                   | Complex                                    |
+| Use Case           | Packaging and running containers         | Managing, scaling, and deploying containers|
+
+---
+
+
+## Detailed side-by-side comparison of **Docker Swarm** and **Kubernetes**:
+
+| Aspect                | Docker Swarm                                                                 | Kubernetes                                                                 |
+|-----------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| **Definition**        | Native Docker orchestration tool for clustering and managing containers      | Advanced open-source orchestration platform for managing container clusters |
+| **Setup Complexity**  | Simple and quick to set up                                                   | More complex, requires more configuration                                  |
+| **Scalability**       | Good for small to medium clusters                                            | Designed for large-scale, production-grade clusters                        |
+| **Load Balancing**    | Built-in, basic load balancing                                               | Advanced load balancing and service discovery                              |
+| **Self-Healing**      | Limited (restarts failed containers)                                         | Robust (auto-replaces, restarts, and reschedules containers)               |
+| **Rolling Updates**   | Supported, but less advanced                                                 | Advanced rolling updates and rollbacks                                     |
+| **Networking**        | Simple overlay networking                                                    | Advanced networking options (e.g., network policies, ingress controllers)  |
+| **Storage**           | Basic volume support                                                         | Advanced persistent storage management                                     |
+| **Monitoring & Logging** | Basic, requires third-party tools                                         | Extensive ecosystem and integrations for monitoring/logging                |
+| **Community & Ecosystem** | Smaller, maintained by Docker                                            | Large, active community and ecosystem                                      |
+| **Use Case**          | Simpler orchestration needs, quick deployments, smaller teams                | Enterprise-level, complex, large-scale deployments                         |
+| **Learning Curve**    | Gentle                                                                       | Steep                                                                      |
+
+---
+
+***How They Work Together with Docker:***
+
+- Both use Docker containers as the basic unit of deployment.
+- **Docker Swarm** is tightly integrated with Docker CLI and is easier for those already using Docker.
+- **Kubernetes** can run Docker containers (and others), but requires more setup and offers more features for complex environments.
+
+---
+
+**Summary:**  
+
+## Docker Swarm
+
+**It is best for simple, quick, and smaller-scale container orchestration.**
+ 
+## Kubernetes
+
+**It is suited for complex, large-scale, and production-grade orchestration with advanced features.**
+
+
 
 ## Each step in the Docker development workflow:
 
@@ -372,7 +536,7 @@ services:
    docker run -p 8080:80 username/your-image-name:tag
    ```
 
-4. **List running containers:**
+4. **List running containers:(Optional)**
    ```
    docker ps
    ```
@@ -399,13 +563,150 @@ services:
 
 Replace `username`, `your-image-name`, `tag`, and `<container_id>` with your actual Docker Hub username, image name, tag, and container ID.
 
+## Here are the Docker commands to delete both containers and images:
+
+## Best option to delete both the container and the image at the same time, pass the -f flag:
+
+```
+docker rmi -f <image-name-or-id>
+
+```
+
+***That will forcibly remove the image and any stopped containers using it, but first, make sure to stop the running container***
+
+### Delete a Container
+
+**Delete a specific container:**
+
+***docker rm <container_name_or_id>***
+
+```
+docker rm bmt-test-container
+```
+
+**First, stop it if it's running:**
+
+***docker stop <container_name_or_id>***
+
+**Example**
+
+```
+docker rm bmt-test-container
+```
+**Delete all stopped containers:**
+```
+docker container prune
+```
+## Delete a Docker Image
+
+**Delete a specific image:**
+
+***docker rmi <image_name_or_id>***
+
+***Example:***
+```
+docker rmi nginx
+```
+## Delete all unused images:
+```
+docker image prune
+```
+## You may run into some errors:
+
+**Example**
+
+BMT@Eta-Ray ~/bmt-docker/Docker/projects/app.js-docker-project (master)$ docker rmi e41698f75c81
+Error response from daemon: conflict: unable to delete e41698f75c81 (must be forced) - image is being used by stopped container 67af49674e25
+
+***The error you're seeing:***
+
+**Error response from daemon: conflict: unable to delete e41698f75c81 (must be forced) - image is being used by stopped container 67af49674e25**
+**means Docker won’t delete the image because a container (even if stopped) is still using it.**
+
+## Solution to remove the container: Remove the stopped container first
+
+```
+docker rm 67af49674e25
+```
+
+***Then try deleting the image again:***
+
+```
+docker rmi e41698f75c81
+```
+
+## Alternative: Force delete the image
+
+**If you want to force-delete the image and remove all associated containers automatically (⚠️ destructive):**
+
+```
+docker rmi -f e41698f75c81
+```
+
+## Notice: Use this only if you're sure you don’t need the container. For practice purposes, it doesn't matter.
+
+## Importance:
+
+### How do I know which particular container an image is using?
+
+ ***To find which containers are using a specific Docker image, you can use this command, and please DO NOT TRY TO MEMORISE THESE COMMANDS.***
+
+ **IF YOU TRY THIS COMMAND AND GET NO RESULTS, TRY THE ALTERNATIVE APPROACH BELOW**
+
+```
+docker ps -a --filter ancestor=<image-id-or-name>
+```
+
+```
+docker ps -a --filter ancestor=0b40d2c78646
+```
+
+***This shows all containers (running or stopped) that were created from that image.***
+
+## Alternatively, use this broader approach:
+
+**List all containers with their image:**
+
+```
+docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"
+```
+
+***Then, visually match the IMAGE column with your image ID or name.***
+
+## You can also see how much space Docker is currently using in your system by running:
+
+```
+docker system df
+```
+
+***This command shows disk usage by images, containers, and volumes.***
 
 
-   #####################################################
-   ### You must be feeling like a champ already right? # 
-   #                                                   #
-   ## If you found this repo useful, give it a STAR 🌠 #
-   #####################################################
+## To clean up unused data, you can run:
+
+```
+docker system prune
+```
+
+*(This will remove unused images, containers, and networks. Use with caution.)*
+
+
+
+## To reclaim this space, run:
+
+```
+docker system prune -a --volumes
+```
+
+*(This will remove all unused images, containers, and volumes. Use with caution!)*
+
+
+
+   #####################################################################################################
+   ###                             You must be feeling like a champ already, right?                                                   
+                                                                                                                                              
+   ##                              If you found this repo useful, give it a STAR 🌠                                                  
+   #####################################################################################################
 
 
 
