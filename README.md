@@ -563,11 +563,9 @@ services:
 
 Replace `username`, `your-image-name`, `tag`, and `<container_id>` with your actual Docker Hub username, image name, tag, and container ID.
 
-## To delete a Docker container or image, you use the following Docker commands. Here’s how:
-
 ## Here are the Docker commands to delete both containers and images:
 
-## Best option to delete both the container and the image at the same time by passing the -f flag:
+## Best option to delete both the container and the image at the same time, pass the -f flag:
 
 ```
 docker rmi -f <image-name-or-id>
