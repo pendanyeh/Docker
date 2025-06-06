@@ -478,7 +478,9 @@ docker rmi -f e41698f75c81
 
 ### How do I know which particular container an image is using?
 
-``` To find which containers are using a specific Docker image, you can use this command, and please DO NOT TRY TO MEMORISE THESE COMMANDS.```
+ ***To find which containers are using a specific Docker image, you can use this command, and please DO NOT TRY TO MEMORISE THESE COMMANDS.***
+
+ **IF YOU TRY THIS COMMAND AND GET NO RESULTS, TRY THE ALTERNATIVE APPROACH BELOW**
 
 ```
 docker ps -a --filter ancestor=<image-id-or-name>
