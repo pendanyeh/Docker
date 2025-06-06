@@ -440,14 +440,41 @@ docker rmi nginx
 ```
 docker image prune
 ```
+## You may run into some errors:
+
+**Example**
+
+BMT@Eta-Ray ~/bmt-docker/Docker/projects/app.js-docker-project (master)$ docker rmi e41698f75c81
+Error response from daemon: conflict: unable to delete e41698f75c81 (must be forced) - image is being used by stopped container 67af49674e25
+
+***The error you're seeing:***
+
+**Error response from daemon: conflict: unable to delete e41698f75c81 (must be forced) - image is being used by stopped container 67af49674e25**
+**means Docker won’t delete the image because a container (even if stopped) is still using it.**
+
+##Solution to remove the container: Remove the stopped container first
+
+```docker rm 67af49674e25```
+
+***Then try deleting the image again:***
+
+```docker rmi e41698f75c81```
+
+## Alternative: Force delete the image
+
+**If you want to force-delete the image and remove all associated containers automatically (⚠️ destructive):**
+
+```docker rmi -f e41698f75c81```
+
+## Notice: Use this only if you're sure you don’t need the container.
 
 
 
-   #####################################################
-   ### You must be feeling like a champ already right? # 
-   #                                                   #
-   ## If you found this repo useful, give it a STAR 🌠 #
-   #####################################################
+   ################################################################################################################################################
+   ###                                         You must be feeling like a champ already, right?                                                   # 
+   #                                                                                                                                              #
+   ##                                          If you found this repo useful, give it a STAR 🌠                                                   #
+   ################################################################################################################################################
 
 
 
