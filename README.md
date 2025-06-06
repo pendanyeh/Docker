@@ -474,6 +474,32 @@ docker rmi -f e41698f75c81
 
 ## Notice: Use this only if you're sure you don’t need the container. For practice purposes, it doesn't matter.
 
+## Importance:
+
+### How do I know which particular container an image is using?
+
+``` To find which containers are using a specific Docker image, you can use this command, and please DO NOT TRY TO MEMORISE THESE COMMANDS.```
+
+```
+docker ps -a --filter ancestor=<image-id-or-name>
+```
+
+```
+docker ps -a --filter ancestor=0b40d2c78646
+```
+
+***This shows all containers (running or stopped) that were created from that image.***
+
+## Alternatively, use this broader approach:
+
+**List all containers with their image:**
+
+```
+docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"
+```
+
+***Then, visually match the IMAGE column with your image ID or name.***
+
 
 
    #######################################################################################################
