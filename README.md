@@ -452,7 +452,7 @@ Error response from daemon: conflict: unable to delete e41698f75c81 (must be for
 **Error response from daemon: conflict: unable to delete e41698f75c81 (must be forced) - image is being used by stopped container 67af49674e25**
 **means Docker won’t delete the image because a container (even if stopped) is still using it.**
 
-##Solution to remove the container: Remove the stopped container first
+## Solution to remove the container: Remove the stopped container first
 
 ```
 docker rm 67af49674e25
