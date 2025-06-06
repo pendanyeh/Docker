@@ -244,8 +244,77 @@ https://app.docker.com/signup/?_gl=1*1az2fao*_ga*NjgzOTMzNjQzLjE3NDkyMDgyMDk.*_g
 
 * Create a file called Dockerfile:
 
-### Dockerfile, example:
+### Dockerfile, some examples:
 
+**A simple Dockerfile for Node.js**
+```
+FROM node:alpine
+
+# Copy the files from the host file system to the image file system
+COPY . /app
+
+# Set the working directory in the image
+WORKDIR /app
+
+# Run a command to start the application
+CMD node app.js 
+```
+**A Complex Dockerfile for Multi-stage **
+
+```
+# Stage 1: Build dependencies
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+RUN npm install --production=false
+
+# Copy source code
+COPY . .
+
+# Optional: Run tests or build steps here
+# RUN npm test
+# RUN npm run build
+
+# Stage 2: Production image
+FROM node:18-alpine
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV PORT=3000
+
+WORKDIR /app
+
+# Create a non-root user
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+# Copy only necessary files from builder
+COPY --from=builder /app /app
+
+# Install only production dependencies
+RUN npm ci --only=production
+
+# Set permissions
+RUN chown -R appuser:appgroup /app
+
+USER appuser
+
+# Expose port
+EXPOSE 3000
+
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+  CMD node -e "require('net').connect(process.env.PORT, '127.0.0.1').on('error', () => process.exit(1))"
+
+# Start the application
+CMD ["node", "app.js"]
+
+```
+**A Python Dockerfile**
+
+```
 FROM python:3.10
 COPY . /app
 WORKDIR /app
@@ -273,6 +342,7 @@ services:
 * Run it:
 
 * docker-compose up
+```
 
 ## What to keep in mind:
 
