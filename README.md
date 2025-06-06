@@ -99,9 +99,9 @@ https://hub.docker.com/
 
 # Prerequisites
 
-***1. Basic Command Line Skills***
+## 1. Basic Command Line Skills
 
-**You should be comfortable with:**
+***You should be comfortable with:***
 
 * Navigating directories (cd, ls, pwd)
 
@@ -109,7 +109,7 @@ https://hub.docker.com/
 
 * Running scripts and installing packages
 
-***2. Operating Systems & Virtualization Concepts***
+## 2. Operating Systems & Virtualization Concepts
 
 * Understand how traditional applications run on OSes
 
@@ -117,7 +117,7 @@ https://hub.docker.com/
 
 * Learn the difference between VMs vs Containers
 
-***3. Networking Basics***
+## 3. Networking Basics
 
 * What are ports and IP addresses
 
@@ -125,14 +125,15 @@ https://hub.docker.com/
 
 * Basics of client-server communication (e.g., HTTP)
 
-***4. Software Development & Deployment Basics***
+## 4. Software Development & Deployment Basics
+
 * Know what builds, environments, and dependencies are
 
 * Familiarity with package managers (e.g., npm, pip, apt)
 
 * Concept of an application stack (e.g., Node.js + MongoDB)
 
-***5. Understanding of Source Control (Git)***
+## 5. Understanding of Source Control (Git)
 
 * You don’t need to be a Git expert, but you should:
 
@@ -140,11 +141,11 @@ https://hub.docker.com/
 
 * Be able to manage basic branches
 
-***6. Familiarity with YAML & Configuration Files***
+## 6. Familiarity with YAML & Configuration Files
 
 * Docker and related tools (like Docker Compose or Kubernetes) rely heavily on configuration in YAML and .env files.
 
-***7. Optional but Helpful: Linux Fundamentals***
+## 7. Optional but Helpful: Linux Fundamentals
 
 * Knowing basic file system layout (e.g., /etc, /usr, /var)
 
