@@ -178,14 +178,18 @@ https://hub.docker.com/
 **Find the link below. Window users, please make sure to check if your Windows OS is AMD64 or ARM64**
 **before you start any installation.**
 
-* Windows/macOS: Install Docker Desktop from: https://www.docker.com/products/docker-desktop
+* Windows/macOS: Docker Desktop Installation
 
-***Some important links to check:***
-
-**Docker Desktop download**
+***Docker Desktop installation***
 
 ```
-  https://docs.docker.com/desktop/setup/install/windows-install/
+https://www.docker.com/products/docker-desktop
+```
+
+**Docker Desktop System Requirements, etc.**
+
+```
+https://docs.docker.com/desktop/setup/install/windows-install/
 ```
   
 ***Create a DockerHub account:***
@@ -194,9 +198,6 @@ https://hub.docker.com/
 https://app.docker.com/signup/?_gl=1*1az2fao*_ga*NjgzOTMzNjQzLjE3NDkyMDgyMDk.*_ga_XJWPQMJYHQ*czE3NDkyMDgyMDgkbzEkZzEkdDE3NDkyMDgyMDkkajU5JGwwJGgw
 ```
 
-  ```
-https://app.docker.com/
-  ```
 
 * Check your Windows OS: Open Settings > System > About
 
