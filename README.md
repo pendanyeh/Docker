@@ -401,7 +401,7 @@ services:
 
 ![image](https://github.com/user-attachments/assets/54142db8-4d77-4139-920e-1180cb16b792)
 
-### A comprehensive table comparing **Docker** and **Kubernetes**, including their definitions, advantages, disadvantages, how they work together, and the problems they solve:
+## A comprehensive table comparing Docker and Kubernetes, including their definitions, advantages, disadvantages, how they work together, and the problems they solve:
 
 | Aspect                | Docker                                                                                      | Kubernetes                                                                                   |
 |-----------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
