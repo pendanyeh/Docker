@@ -710,9 +710,9 @@ https://github.com/rayeeta/Docker
 
 - **Click on projects**
   
-- **Navigate to app.js-docker-project** # In this directory are your project files Dockerfile and app.js
+- **Navigate to app.js-docker-project.**  In this directory are the project files Dockerfile and app.js
 
-### Please, make sure to clone this repository to your local environment and then cd to the project directory 'app.js-docker-project.' You can start building from here
+### Please, make sure to mkdir <give-it-your-own-name>, cd to this new directory, and clone this repository inside the new directory, cd to the project directory 'app.js-docker-project.' You can start building from here
 
 
 
