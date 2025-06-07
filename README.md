@@ -700,6 +700,22 @@ docker system prune -a --volumes
 
 *(This will remove all unused images, containers, and volumes. Use with caution!)*
 
+## Follow this link to start practicing how to build an image using Docker:
+
+```
+https://github.com/rayeeta/Docker
+```
+
+***Steps***
+
+- **Click on projects**
+  
+- **Navigate to app.js-docker-project** # In this directory are your project files Dockerfile and app.js
+
+### Please, make sure to clone this repository to your local environment and then cd to the project directory 'app.js-docker-project.' You can start building from here
+
+
+
 
 
    #####################################################################################################
